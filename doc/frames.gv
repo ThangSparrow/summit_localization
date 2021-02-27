@@ -1,0 +1,26 @@
+digraph G {
+"summit_xl_map" -> "summit_xl_odom"[label=" Broadcaster: /ekf_se_map\nAverage rate: 100.2\nBuffer length: 5.0\nMost recent transform: 1576751363.506\nOldest transform: 1576751358.506\n"];
+"summit_xl_map" -> "utm"[label=" Broadcaster: /navsat_transform\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"summit_xl_base_link" -> "summit_xl_base_docking_contact_link"[label=" Broadcaster: /play_1614458177500252741\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"summit_xl_base_footprint" -> "summit_xl_base_link"[label=" Broadcaster: /play_1614458177500252741\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"summit_xl_odom" -> "summit_xl_base_footprint"[label=" Broadcaster: /play_1614458177500252741\nAverage rate: 80.176\nBuffer length: 4.989\nMost recent transform: 1576751363.486\nOldest transform: 1576751358.496\n"];
+"summit_xl_front_laser_link" -> "summit_xl_front_laser_base_link"[label=" Broadcaster: /play_1614458177500252741\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"summit_xl_base_link" -> "summit_xl_front_laser_link"[label=" Broadcaster: /play_1614458177500252741\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"summit_xl_front_rgbd_camera_rgb_base_link" -> "summit_xl_front_rgbd_camera_depth_frame"[label=" Broadcaster: /play_1614458177500252741\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"summit_xl_base_link" -> "summit_xl_front_rgbd_camera_rgb_base_link"[label=" Broadcaster: /play_1614458177500252741\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"summit_xl_front_rgbd_camera_depth_frame" -> "summit_xl_front_rgbd_camera_depth_optical_frame"[label=" Broadcaster: /play_1614458177500252741\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"summit_xl_front_rgbd_camera_rgb_base_link" -> "summit_xl_front_rgbd_camera_link"[label=" Broadcaster: /play_1614458177500252741\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"summit_xl_front_rgbd_camera_rgb_base_link" -> "summit_xl_front_rgbd_camera_rgb_optical_frame"[label=" Broadcaster: /play_1614458177500252741\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"summit_xl_base_link" -> "summit_xl_gps_base_link"[label=" Broadcaster: /play_1614458177500252741\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"summit_xl_base_link" -> "summit_xl_imu_link"[label=" Broadcaster: /play_1614458177500252741\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"local_origin" -> "local_origin_ned"[label=" Broadcaster: /play_1614458177500252741\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"fcu" -> "fcu_frd"[label=" Broadcaster: /play_1614458177500252741\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"summit_xl_base_link" -> "summit_xl_back_left_wheel"[label=" Broadcaster: /play_1614458177500252741\nAverage rate: 32.057\nBuffer length: 4.96\nMost recent transform: 1576751363.465\nOldest transform: 1576751358.505\n"];
+"summit_xl_base_link" -> "summit_xl_back_right_wheel"[label=" Broadcaster: /play_1614458177500252741\nAverage rate: 32.057\nBuffer length: 4.96\nMost recent transform: 1576751363.465\nOldest transform: 1576751358.505\n"];
+"summit_xl_base_link" -> "summit_xl_front_left_wheel"[label=" Broadcaster: /play_1614458177500252741\nAverage rate: 32.057\nBuffer length: 4.96\nMost recent transform: 1576751363.465\nOldest transform: 1576751358.505\n"];
+"summit_xl_base_link" -> "summit_xl_front_right_wheel"[label=" Broadcaster: /play_1614458177500252741\nAverage rate: 32.057\nBuffer length: 4.96\nMost recent transform: 1576751363.465\nOldest transform: 1576751358.505\n"];
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 1614458188.4866524"[ shape=plaintext ] ;
+}->"fcu";
+}
