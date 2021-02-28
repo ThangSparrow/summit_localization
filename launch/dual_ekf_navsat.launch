@@ -12,8 +12,8 @@
 
 <launch>
 
-  <rosparam command="load" file="$(find summit_localization)/params/dual_ekf_navsat_example.yaml" />
-
+  <rosparam command="load" file="$(find summit_localization)/params/dual_ekf_navsat.yaml" />
+  
   <node type="rviz" name="rviz" pkg="rviz" args="-d $(find summit_localization)/rviz/localization.rviz"/>
   
   <node pkg="summit_localization" type="fix_gps_data.py" name="fix_gps_data" clear_params="true"/>
@@ -24,12 +24,14 @@
     <remap from="odometry/wheel" to="summit_xl/robotnik_base_control/odom"/>
   </node>
   
+  <!-- fuse all data -->
   <node pkg="robot_localization" type="ekf_localization_node" name="ekf_se_map" clear_params="true">
     <remap from="imu/data" to="summit_xl/imu/data"/>
     <remap from="odometry/wheel" to="summit_xl/robotnik_base_control/odom"/>
     <remap from="odometry/filtered" to="odometry/filtered_map"/>
   </node>
-
+  
+  <!-- process gps data -->
   <node pkg="robot_localization" type="navsat_transform_node" name="navsat_transform" clear_params="true">
     <remap from="odometry/filtered" to="odometry/filtered_map"/>
     <remap from="gps/fix" to="gps_fixed"/>
